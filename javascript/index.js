@@ -15,6 +15,14 @@ function updateTime() {
   parisTimeElement.innerHTML = parisTime.format(
     "hh:mm:ss [<small>]A[</small>]"
   );
+  let johannesburgElement = document.querySelector("#johannesburg");
+  let johannesburgDateElement = johannesburgElement.querySelector(".date");
+  let johannesburgTimeElement = johannesburgElement.querySelector(".time");
+  let johannesburgTime = moment().tz("Africa/Johannesburg");
+  johannesburgDateElement.innerHTML = johannesburgTime.format("MMMM Do YYYY");
+  johannesburgTimeElement.innerHTML = johannesburgTime.format(
+    "hh:mm:ss [<small>]A[</small>]"
+  );
 }
 
 function updateCity(event) {
